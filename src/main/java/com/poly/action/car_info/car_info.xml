@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="car_info" extends="myDefault">
+	
+		
+		<action name="CarProperty" class="com.poly.action.car_info.CarProperty"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carProperty.ftl</result>
+		</action> 
+		
+		<action name="SelCarProperty" class="com.poly.action.car_info.CarProperty" method="SelCarProperty"> 
+		</action> 
+		
+		<action name="DelCarProperty" class="com.poly.action.car_info.CarProperty" method="DelCarProperty"> 
+		</action> 
+		
+		<action name="SaveProperty" class="com.poly.action.car_info.CarProperty" method="SaveProperty"> 
+		</action> 
+		
+		<action name="AddProperty" class="com.poly.action.car_info.CarProperty" method="AddProperty"> 
+		</action> 
+		
+		<action name="CarPart" class="com.poly.action.car_info.CarPart"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carPart.ftl</result>
+		</action> 
+		
+		<action name="AddPart" class="com.poly.action.car_info.CarPart" method="AddPart"> 
+		</action> 
+		
+		<action name="DelPart" class="com.poly.action.car_info.CarPart" method="DelPart"> 
+		</action> 
+		
+		<action name="SavePart" class="com.poly.action.car_info.CarPart" method="SavePart"> 
+		</action> 
+		
+		<action name="CarChannel" class="com.poly.action.car_info.CarChannel"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carChannel.ftl</result>
+		</action> 
+		
+		<action name="SaveChannel" class="com.poly.action.car_info.CarChannel" method="SaveChannel"> 
+		</action> 
+		
+		<action name="PlSaveChannel" class="com.poly.action.car_info.CarChannel" method="PlSaveChannel"> 
+		</action> 
+		
+		<action name="CarSeriesParameter" class="com.poly.action.car_info.CarSeriesParameter"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carSeriesParameter.ftl</result>
+		</action> 
+		
+		<action name="CarSeriesParameterA" class="com.poly.action.car_info.CarSeriesParameter" method="CarSeriesParameterA"> 
+		</action> 
+		
+		<action name="SaveCarSeriesParameter" class="com.poly.action.car_info.CarSeriesParameter" method="SaveCarSeriesParameter"> 
+		</action>
+		
+		<action name="CarCatalogParameter" class="com.poly.action.car_info.CarCatalogParameter"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/CarParamVindicate.ftl</result>
+		</action> 
+		
+		<action name="CarCatalogParameterA" class="com.poly.action.car_info.CarCatalogParameter" method="CarCatalogParameterA"> 
+		</action> 
+		
+		<action name="SaveA" class="com.poly.action.car_info.CarCatalogParameter" method="SaveA"> 
+		</action>
+		
+		<action name="SaveB" class="com.poly.action.car_info.CarCatalogParameter" method="SaveB"> 
+		</action>
+		
+		<action name="SaveC" class="com.poly.action.car_info.CarCatalogParameter" method="SaveC"> 
+		</action>
+		
+		<action name="CatalogManage" class="com.poly.action.car_info.CatalogManage" > 
+			<result name="success" type="freemarker">/WEB-INF/ftl/catalogManage.ftl</result>
+		</action> 
+		
+		<action name="CatalogManageA" class="com.poly.action.car_info.CatalogManage" method="CatalogManageA"> 
+		</action>
+		
+		<action name="SaveCatalogManageA" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageA"> 
+		</action> 
+		
+		<action name="SaveCatalogManageB" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageB"> 
+		</action> 
+		
+		<action name="SaveCatalogManageC" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageC"> 
+		</action> 
+		
+		<action name="SaveCatalogManageD" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageD"> 
+		</action>
+		
+		<action name="SaveCatalogManageE" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageE"> 
+		</action>
+		
+		<action name="SaveCatalogManageF" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageF"> 
+		</action>
+		
+		<action name="SaveCatalogManageG" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageG"> 
+		</action>
+		
+		<action name="SaveCatalogManageH" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageH"> 
+		</action>
+		
+		<action name="SaveCatalogManageI" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageI"> 
+		</action>
+		
+		<action name="SaveCatalogManageJ" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageJ"> 
+		</action>
+		
+		<action name="SaveCatalogManageK" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageK"> 
+		</action>
+		
+		<action name="SaveCatalogManageL" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageL"> 
+		</action>
+		
+		<action name="SaveCatalogManageM" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageM"> 
+		</action>
+		
+		<action name="SaveCatalogManageN" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageN"> 
+		</action>
+		
+		<action name="SaveCatalogManageO" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageO"> 
+		</action>
+		
+		<action name="SaveCatalogManageP" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageP"> 
+		</action>
+		
+		<action name="SaveCatalogManageQ" class="com.poly.action.car_info.CatalogManage" method="SaveCatalogManageQ"> 
+		</action>
+		
+		<action name="CarMainSeries" class="com.poly.action.car_info.CarMainSeries" method="test"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carSeries.ftl</result>
+		</action>
+		
+		<action name="GetMarker" class="com.poly.action.car_info.CarMainSeries" method="GetMarker"> 
+		</action>
+		
+		<action name="SaveSeries" class="com.poly.action.car_info.CarMainSeries" method="SaveSeries"> 
+		</action>
+		
+		<action name="PlSaveSeries" class="com.poly.action.car_info.CarMainSeries" method="PlSaveSeries"> 
+		</action>
+		
+		<action name="CarDataInput" class="com.poly.action.car_info.CarDataInput"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carDataInput.ftl</result>
+		</action>
+		
+		<action name="UpDateCarDate" class="com.poly.action.car_info.CarDataInput" method="UpDateCarDate"> 
+		</action>
+		
+		<action name="UpDateCarDateFour" class="com.poly.action.car_info.CarDataInput" method="UpDateCarDateFour"> 
+		</action>
+		
+		<action name="UpDateCarDateTwo" class="com.poly.action.car_info.CarDataInput" method="UpDateCarDateTwo"> 
+		</action>
+		
+		<action name="UpDateCarDateThree" class="com.poly.action.car_info.CarDataInput" method="UpDateCarDateThree"> 
+		</action>
+		
+		<action name="selectLevel2CarInfo" class="com.poly.action.car_info.CarDataInput" method="selectLevel2CarInfo"> 
+		</action>
+		
+		<action name="CarPkInfo" class="com.poly.action.car_info.CarPkInfo"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carPkInfo.ftl</result>
+		</action>
+		
+		<action name="GetCarPkSeries" class="com.poly.action.car_info.CarPkInfo" method="GetCarPkSeries"> 
+		</action>
+		
+		<action name="GetCarPkInfo" class="com.poly.action.car_info.CarPkInfo" method="GetCarPkInfo"> 
+		</action>
+		
+		<action name="UpDatePkInfo" class="com.poly.action.car_info.CarPkInfo" method="UpDatePkInfo"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carPkInfo.ftl</result>
+		</action>
+		
+		<action name="CarPkInfoNews" class="com.poly.action.car_info.CarPkInfoNews"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/carPkInfoNews.ftl</result>
+		</action>
+		
+		<action name="SaveCarPkInfoNews" class="com.poly.action.car_info.CarPkInfoNews" method="SaveCarPkInfoNews"> 
+			<result name="success" type="freemarker">/WEB-INF/ftl/saveCarPkInfoNews.ftl</result>
+		</action>
+		
+	</package>
+
+</struts>

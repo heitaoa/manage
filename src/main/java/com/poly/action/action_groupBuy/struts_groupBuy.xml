@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_groupBuy" extends="myDefault">	
+		<action name="groupBuyManage" class="com.poly.action.action_groupBuy.GroupBuyAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoManage.ftl</result>
+		</action>
+		
+		<action name="groupBuyApply" class="com.poly.action.action_groupBuy.GroupBuyAction" method="groupBuyApply">
+			<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoList.ftl</result>
+		</action>
+		
+		<action name="groupBuyReturnVisit" class="com.poly.action.action_groupBuy.GroupBuyAction" method="groupBuyReturnVisit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/applyInfoRev.ftl</result>
+		</action>
+		
+		<action name="downBaoming" class="com.poly.action.action_groupBuy.GroupBuyAction" method="downBaoming">
+		</action>
+		<action name="getCityInfo" class="com.poly.action.action_groupBuy.GroupBuyAction" method="getCityInfo">		
+		</action>
+		
+		<action name="getRevman" class="com.poly.action.action_groupBuy.GroupBuyAction" method="getRevman">		
+		</action>
+		
+		<action name="getDetail" class="com.poly.action.action_groupBuy.GroupBuyAction" method="getDetails">		
+		</action>
+		
+		<action name="getCheXing" class="com.poly.action.action_groupBuy.GroupBuyAction" method="getCheXing">		
+		</action>
+		
+		<action name="saveApply" class="com.poly.action.action_groupBuy.GroupBuyAction" method="saveApply">		
+		</action>
+		
+		<action name="signExcel" class="com.poly.action.action_groupBuy.GroupExcelAction" method="signExcel">		
+		</action>
+		
+		<action name="backExcel" class="com.poly.action.action_groupBuy.GroupExcelAction" method="backExcel">		
+		</action>
+		
+		<action name="deleteApply" class="com.poly.action.action_groupBuy.GroupBuyAction" method="deleteApply">
+		    	<result name="success" type="redirectAction">groupBuyManage</result>
+		</action>
+		
+		
+		<action name="applyDetail" class="com.poly.action.action_groupBuy.GroupBuyAction" method="applyDetail">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyDetail.ftl</result>
+		</action>
+		
+		<action name="applyDetailUpdate" class="com.poly.action.action_groupBuy.GroupBuyAction" method="applyDetailUpdate">
+		    	<result name="success" type="redirectAction">applyDetail</result>
+		</action>
+		
+		<action name="applyDetail2" class="com.poly.action.action_groupBuy.GroupBuyAction" method="applyDetail2">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyDetail2.ftl</result>
+		</action>
+		
+		<action name="applyDetailUpdate2" class="com.poly.action.action_groupBuy.GroupBuyAction" method="applyDetailUpdate2">
+		    	<result name="success" type="redirectAction">applyDetail2</result>
+		</action>
+		
+		<action name="gotoGroupBuyChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoChart.ftl</result>
+		</action>
+		<action name="getChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="getChart">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoChart.ftl</result>
+		</action>
+		
+		
+		<action name="tuisong" class="com.poly.action.action_groupBuy.GroupBuyAction" method="tuisong">		
+		</action>
+		
+		<action name="getChartCount" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="getChartCount">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoCount.ftl</result>
+		</action>
+		
+		<action name="getTypeChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="getTypeChart">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoiwayChart.ftl</result>
+		</action>
+		<action name="searchTypeChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="searchTypeChart">
+		    	<result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoiwayChart.ftl</result>
+		</action>
+		<action name="addGroupBuy" class="com.poly.action.action_groupBuy.GroupBuyAddAction" method="addGroupBuy">
+		</action>
+		
+		<action name="groupBuyMsg" class="com.poly.action.action_groupBuy.GroupBuySendMsgAction">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/groupBuySendMsg.ftl</result>
+		</action>
+		
+		<action name="sendMsg" class="com.poly.action.action_groupBuy.GroupBuySendMsgAction" method="sendMsg">
+		</action>
+		<action name="getBrandChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="getBrandChart">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoBrandsChart.ftl</result>
+		</action>
+		<action name="searchBrandChart" class="com.poly.action.action_groupBuy.GroupBuyChartAction" method="searchBrandChart">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/applyInfoBrandsChart.ftl</result>
+		</action>
+		
+		<action name="toSendMsg" class="com.poly.action.action_groupBuy.SendMsgAction" >
+		    <result name="success" type="freemarker">/WEB-INF/ftl/sendMsg.ftl</result>
+		</action>
+		<action name="sendMsgs" class="com.poly.action.action_groupBuy.SendMsgAction" method="sendMsg">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/sendMsg.ftl</result>
+		</action>
+		<action name="getsitCountForAdm" class="com.poly.action.action_groupBuy.GroupBuyAction" method="getsitCountForAdm">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/applyinfopage/siteCountChart.ftl</result>
+		</action>
+		<action name="groupBuyReturnVisit" class="com.poly.action.action_groupBuy.GroupBuyAction" method="groupBuyReturnVisit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/applyInfoRev.ftl</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_imageEditNot" extends="myDefault">
+	
+	
+		<action name="carImageEditNot" class="com.poly.action.action_image.ImageEditNotAction" method="carImageEdit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carImageEditNot.ftl</result>
+		</action>
+	
+		<action name="saveImageNot" class="com.poly.action.action_image.ImageEditNotAction" method="saveImage">
+			<result name="success"  type="chain">carImageEditNot</result>
+		</action>
+		
+		
+		<action name="carTitleEditNot" class="com.poly.action.action_image.ImageEditNotAction" method="carTitleEdit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTitleEditNot.ftl</result>
+		</action>
+		
+		
+		<action name="saveTitleNot" class="com.poly.action.action_image.ImageEditNotAction" method="saveTitle">
+			<result name="success"  type="chain">carTitleEditNot</result>
+		</action>
+		
+		<action name="updateTitleNot" class="com.poly.action.action_image.ImageEditNotAction" method="updateTitle">
+			<result name="success"  type="chain">carTitleEditNot</result>
+		</action>
+		
+		<action name="carTitleChangeNot" class="com.poly.action.action_image.ImageEditNotAction" method="carTitleChange">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTitleEditNot.ftl</result>
+		</action>
+		
+	</package>
+	
+	
+
+</struts>

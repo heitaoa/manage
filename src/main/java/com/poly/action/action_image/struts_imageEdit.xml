@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_imageEdit" extends="myDefault">
+	
+	
+		<action name="carImageEdit" class="com.poly.action.action_image.ImageEditAction" method="carImageEdit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carImageEdit.ftl</result>
+		</action>
+	
+		<action name="saveImage" class="com.poly.action.action_image.ImageEditAction" method="saveImage">
+			<result name="success"  type="chain">carImageEdit</result>
+		</action>
+		
+		
+		<action name="carTitleEdit" class="com.poly.action.action_image.ImageEditAction" method="carTitleEdit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTitleEdit.ftl</result>
+		</action>
+		
+		
+		<action name="saveTitle" class="com.poly.action.action_image.ImageEditAction" method="saveTitle">
+			<result name="success"  type="chain">carTitleEdit</result>
+		</action>
+		
+		<action name="updateTitle" class="com.poly.action.action_image.ImageEditAction" method="updateTitle">
+			<result name="success"  type="chain">carTitleEdit</result>
+		</action>
+		
+		<action name="carTitleChange" class="com.poly.action.action_image.ImageEditAction" method="carTitleChange">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTitleEdit.ftl</result>
+		</action>
+		
+	</package>
+	
+	
+
+</struts>

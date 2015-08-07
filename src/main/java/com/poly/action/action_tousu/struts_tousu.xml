@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="tousu" extends="myDefault">
+		<action name="tousu_*" method="{1}"
+			class="com.poly.action.action_tousu.TousuAction">
+			<result type="freemarker">/WEB-INF/ftl/tousumange/{1}.ftl</result>
+		</action>
+		
+		<action name="queryCarInfo" method="queryCarInfo"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		<action name="queryTousuDetail" method="queryTousuDetail"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		<action name="tousuUpdate" method="tousuUpdate"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		<action name="queryTousuComment" method="queryTousuComment"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		<action name="saveTousuComment" method="saveTousuComment"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="batchUpdateTousu" method="batchUpdateTousu"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="tousuDownload" method="tousuDownload"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="tousuBatchDownload" method="tousuBatchDownload"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="queryCarInfoByBrand" method="queryCarInfoByBrand"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="queryCarInfoByIway" method="queryCarInfoByIway"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="imgDelete" method="imgDelete"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+		<action name="imgAdd" method="imgAdd"
+			class="com.poly.action.action_tousu.TousuAction">
+		</action>
+		
+	</package>
+</struts>

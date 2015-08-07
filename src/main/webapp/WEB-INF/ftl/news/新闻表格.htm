@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>中国汽车消费网 - 中国汽车消费门户</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="http://www.315che.com/css/styles.css">
+	<link rel="stylesheet" href="http://www.315che.com/css/cars-more-one.css">
+	<link rel="stylesheet" href="http://www.315che.com/css/jcalendar.css">
+</head>
+<body>
+	<div class="topbar">
+		<!--minitop导航开始-->
+		<div class="minitop">
+			<div class="mini-main">
+				<div class="top-link">
+					<a href="javascript:void(0);" onclick="join_favorite(window.location,document.title);">收藏</a>
+					<a href="#">原创</a>
+					<a href="#">纠错</a>
+				</div>
+				<ul class="top-login">
+					<li><a href="#" class="login-btn">登录</a></li>
+					<li><a href="#">注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--minitop导航结束-->
+		<!--头部开始-->
+		<div class="header">
+			<div class="header-main">
+				<div class="clearfix">
+					<div class="logo"><a href="http://www.315che.com/"><img src="http://www.315che.com/images/logo.png" title="中国汽车消费网" alt="中国汽车消费网"></a></div>
+					<div class="nav">
+						<div class="nav-link">
+							<ul>
+								<li><a href="http://inf.315che.com/">资 讯</a></li>
+								<li><a href="http://www.315che.com/pingce/">测 评</a></li>
+								<li><a href="http://price.315che.com/">报 价</a></li>
+								<li><a href="http://pic.315che.com/">图 库</a></li>
+								<li><a href="http://4s.315che.com/">经销商</a></li>
+								<li><a href="http://sun.315che.com/">团 购</a></li>
+								<li><a href="http://tousu.315che.com/">汽车投诉</a></li>
+								<li><a href="http://bbs.315che.com/" target="_blank">论 坛</a></li>
+							</ul>
+						</div>
+						<div class="nav-city">
+							<span class="current-city">当前城市：</span>
+							<div class="change-city">
+								<span></span><i></i>
+								<div class="show-city" id="top-show-city">
+									<dl>
+										<dt>热门城市：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="shanghai">上海</a>
+												<a href="javascript:void(0);" value="beijing">北京</a>
+												<a href="javascript:void(0);" value="guangzhou">广州</a>
+												<a href="javascript:void(0);" value="nanjing">南京</a>
+												<a href="javascript:void(0);" value="wuhan">武汉</a>
+												<a href="javascript:void(0);" value="chengdu">成都</a>
+												<a href="javascript:void(0);" value="shenyang">沈阳</a>
+												<a href="javascript:void(0);" value="dalian">大连</a>
+												<a href="javascript:void(0);" value="hefei">合肥</a>
+												<a href="javascript:void(0);" value="hangzhou">杭州</a>
+												<a href="javascript:void(0);" value="suzhou">苏州</a>
+												<a href="javascript:void(0);" value="xuzhou">徐州</a>
+
+										</dd>
+									</dl>
+									<dl>
+										<dt>华北地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="beijing">北京</a>
+												<a href="javascript:void(0);" value="tianjin">天津</a>
+												<a href="javascript:void(0);" value="taiyuan">太原</a>
+												<a href="javascript:void(0);" value="shijiazhuang">石家庄</a>
+												<a href="javascript:void(0);" value="tangshan">唐山</a>
+												<a href="javascript:void(0);" value="huhehaote">呼和浩特</a>
+												<a href="javascript:void(0);" value="jinan">济南</a>
+												<a href="javascript:void(0);" value="qingdao">青岛</a>
+												<a href="javascript:void(0);" value="yantai">烟台</a>
+
+										</dd>
+									</dl>
+									<dl>
+										<dt>东北地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="haerbin">哈尔滨</a>
+												<a href="javascript:void(0);" value="daqing">大庆</a>
+												<a href="javascript:void(0);" value="changchun">长春</a>
+												<a href="javascript:void(0);" value="shenyang">沈阳</a>
+												<a href="javascript:void(0);" value="dalian">大连</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt>华东地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="shanghai">上海</a>
+												<a href="javascript:void(0);" value="hangzhou">杭州</a>
+												<a href="javascript:void(0);" value="wenzhou">温州</a>
+												<a href="javascript:void(0);" value="ningbo">宁波</a>
+												<a href="javascript:void(0);" value="jinhua">金华</a>
+												<a href="javascript:void(0);" value="zjtaizhou">台州</a>
+												<a href="javascript:void(0);" value="shaoxing">绍兴</a>
+												<a href="javascript:void(0);" value="jiaxing">嘉兴</a>
+												<a href="javascript:void(0);" value="huzhou">湖州</a>
+												<a href="javascript:void(0);" value="quzhou">衢州</a>
+												<a href="javascript:void(0);" value="zjlishui">丽水</a>
+												<a href="javascript:void(0);" value="zhoushan">舟山</a>
+												<a href="javascript:void(0);" value="nanjing">南京</a>
+												<a href="javascript:void(0);" value="suzhou">苏州</a>
+												<a href="javascript:void(0);" value="xuzhou">徐州</a>
+												<a href="javascript:void(0);" value="wuxi">无锡</a>
+												<a href="javascript:void(0);" value="hefei">合肥</a>
+												<a href="javascript:void(0);" value="zhenjiang">镇江</a>
+												<a href="javascript:void(0);" value="huaian">淮安</a>
+												<a href="javascript:void(0);" value="suqian">宿迁</a>
+												<a href="javascript:void(0);" value="yangzhou">扬州</a>
+												<a href="javascript:void(0);" value="taizhou">泰州</a>
+												<a href="javascript:void(0);" value="nantong">南通</a>
+												<a href="javascript:void(0);" value="changzhou">常州</a>
+												<a href="javascript:void(0);" value="lianyungang">连云港</a>
+												<a href="javascript:void(0);" value="yancheng">盐城</a>
+												<a href="javascript:void(0);" value="tongling">铜陵</a>
+												<a href="javascript:void(0);" value="wuhu">芜湖</a>
+												<a href="javascript:void(0);" value="fuyang">阜阳</a>
+												<a href="javascript:void(0);" value="anqing">安庆</a>
+												<a href="javascript:void(0);" value="bangbu">蚌埠</a>
+												<a href="javascript:void(0);" value="liuan">六安</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt>华中地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="zhengzhou">郑州</a>
+												<a href="javascript:void(0);" value="luoyang">洛阳</a>
+												<a href="javascript:void(0);" value="wuhan">武汉</a>
+												<a href="javascript:void(0);" value="yichang">宜昌</a>
+												<a href="javascript:void(0);" value="changsha">长沙</a>
+												<a href="javascript:void(0);" value="nanchang">南昌</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt>华南地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="guangzhou">广州</a>
+												<a href="javascript:void(0);" value="shenzhen">深圳</a>
+												<a href="javascript:void(0);" value="dongguan">东莞</a>
+												<a href="javascript:void(0);" value="foshan">佛山</a>
+												<a href="javascript:void(0);" value="nanning">南宁</a>
+												<a href="javascript:void(0);" value="haikou">海口</a>
+												<a href="javascript:void(0);" value="fjfuzhou">福州</a>
+												<a href="javascript:void(0);" value="xiamen">厦门</a>
+												<a href="javascript:void(0);" value="quanzhou">泉州</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt>西北地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="lanzhou">兰州</a>
+												<a href="javascript:void(0);" value="yinchuan">银川</a>
+												<a href="javascript:void(0);" value="xian">西安</a>
+												<a href="javascript:void(0);" value="wulumuqi">乌鲁木齐</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt>西南地区：</dt>
+										<dd>
+												<a href="javascript:void(0);" value="chongqing">重庆</a>
+												<a href="javascript:void(0);" value="guiyang">贵阳</a>
+												<a href="javascript:void(0);" value="chengdu">成都</a>
+												<a href="javascript:void(0);" value="kunming">昆明</a>
+												<a href="javascript:void(0);" value="mianyang">绵阳</a>
+												<a href="javascript:void(0);" value="luzhou">泸州</a>
+												<a href="javascript:void(0);" value="nanchong">南充</a>
+												<a href="javascript:void(0);" value="panzhihua">攀枝花</a>
+										</dd>
+									</dl>
+
+								</div>
+							</div>
+							<ul class="hotcitys">
+								<li>热门城市：</li>
+									<li><a href="javascript:void(0);" value="beijing">北京</a></li>
+									<li><a href="javascript:void(0);" value="nanjing">南京</a></li>
+									<li><a href="javascript:void(0);" value="suzhou">苏州</a></li>
+									<li><a href="javascript:void(0);" value="hangzhou">杭州</a></li>
+									<li><a href="javascript:void(0);" value="hefei">合肥</a></li>
+									<li><a href="javascript:void(0);" value="wuhan">武汉</a></li>
+									<li><a href="javascript:void(0);" value="guangzhou">广州</a></li>
+									<li><a href="javascript:void(0);" value="shanghai">上海</a></li>
+								<li><a href="http://www.315che.com/arealist.htm">更多 &rsaquo;&rsaquo;</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<i class="logo-shadow1"></i>
+				<i class="logo-shadow2"></i>
+			</div>
+			<div class="header-blue"></div>
+		</div>
+		<!--头部结束-->
+		<div class="nav-car ma-b10">
+			<ul class="clearfix">
+				<li class="nav-car01"><a href="http://www.315che.com/model/brand/0-0-l1-0.htm">微型车</a></li>
+				<li class="nav-car02"><a href="http://www.315che.com/model/brand/0-0-l2-0.htm">小型车</a></li>
+				<li class="nav-car03"><a href="http://www.315che.com/model/brand/0-0-l3-0.htm">紧凑型车</a></li>
+				<li class="nav-car04"><a href="http://www.315che.com/model/brand/0-0-l4-0.htm">中型车</a></li>
+				<li class="nav-car05"><a href="http://www.315che.com/model/brand/0-0-l5-0.htm">中大型车</a></li>
+				<li class="nav-car06"><a href="http://www.315che.com/model/brand/0-0-l6-0.htm">豪华车</a></li>
+				<li class="nav-car07"><a href="http://www.315che.com/model/brand/0-0-l7-0.htm">MPV</a></li>
+				<li class="nav-car08"><a href="http://www.315che.com/model/brand/0-0-l8-0.htm">SUV</a></li>
+				<li class="nav-car09"><a href="http://www.315che.com/model/brand/0-0-l9-0.htm">跑车</a></li>
+				<li class="nav-car10"><a href="http://www.315che.com/model/brand/0-0-l10-0.htm">电动车</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--主内容开始-->
+	<div class="content">
+	<!--主内容开始-->
+	<div class="content">
+		<div class="breadcrumb-nav ma-b10">
+			<div class="related-search">
+				<form action="#">
+					<div class="search-box">
+						<i class="icon"></i>
+						<input type="text" autocomplete="off" class="input-search">
+						<input type="submit" value="搜索" class="submit-btn">
+					</div>
+				</form>
+			</div>
+			<p>您现在的位置：<a href="#">首页</a> &#62; <a href="#">汽车百科</a>  &#62;  <a href="#" class="current">正文</a></p>
+		</div>
+		<div class="car-public-top">
+			<div class="car-brand-info">
+				<div class="brand-logo"><a href="#"><img src="http://www.315che.com/images/honda_logo.png" alt=""></a></div>
+				<h1>本田</h1>
+			</div>
+			<div class="car-publicbar">
+				<ul>
+					<li><a href="#">综述</a></li>
+					<li><a href="#">报价</a></li>
+					<li><a href="#">图片</a></li>
+					<li><a href="#">参数配置</a></li>
+					<li><a href="#">经销商</a></li>
+					<li><a href="#">口碑</a></li>
+					<li class="current"><a href="#">文章</a></li>
+					<li><a href="#">团购</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="ma-t20 clearfix">
+			<div class="car-type-body">
+				<div class="row row-border ma-b15">
+					<div class="news-details-top">
+						<h1>表格表格表格表格表格</h1>
+						<p class="author-info">
+							<span>2015-02-05</span>
+							<span>来源：<a href="" target="_blank"></a></span>
+							<span>责任编辑：<a href="javascript:void()">系统管理员</a></span>
+						</p>
+						<div class="ndt-tools">
+							<a href="#"><i class="icon news-comment"></i>1,380</a>
+							<span>|</span>
+							<a href="#"><i class="icon news-share"></i>分享</a>
+						</div>
+					</div>
+					<div class="news-details-con">
+						<!--新闻模块表格 start-->
+						<table style="border-collapse:collapse" bordercolor="#ccc" cellspacing="0" cellpadding="0" width="600" align="center" border="1">
+							<tbody>
+								<tr class="firstRow">
+								<td style="color:#fff" bgcolor="#2a7d9e" align="center" colspan="6">地区进口奔驰4S店最新报价：2014款奔驰S级价格表（2015-2-5）</td>
+								</tr>
+								<tr bgcolor="#d8e4eb"><td align="center">车型</td><td align="center">车型</td><td align="center">车型</td><td align="center">车型</td><td align="center">车型</td><td align="center">车型</td></tr><tr><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td></tr><tr><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td></tr><tr><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td><td align="center" valign="top" width="118"><br/></td></tr><tr><td  bgcolor="#d8e4eb" style="padding-right:10px;" align="right" height="24" colspan="6"><a href="http://www.315che.com/">中国汽车消费网</a></td></tr>
+							</tbody>
+						</table>
+					<p><br/></p>
+						<!--新闻模块表格 end-->
+					</div>
+					<div class="bott-shares">
+						<div class="share-tools">分享到：<a href="#"><img src="images/share-icons.gif" alt=""></a></div>
+						<div class="ndt-tools"><a href="#"><i class="icon news-comment"></i>118</a></div>
+					</div>
+				</div>
+				<div class="adcbox adcbox-main clearfix">
+					<span><a href="#" class="ad-360x50 ad-c-teal">明锐团购</a></span>
+					<span><a href="#" class="ad-172x50 ad-c-blue">明锐团购</a></span>
+					<span class="sp-r"><a href="#" class="ad-180x50 ad-c-purple">明锐团购</a></span>
+					<span><a href="#" class="ad-180x50 ad-c-blue">明锐团购</a></span>
+					<span><a href="#" class="ad-172x50 ad-c-purple">明锐团购</a></span>
+					<span class="sp-r"><a href="#" class="ad-360x50 ad-c-teal">明锐团购</a></span>
+				</div>
+				<div class="row row-border ma-t15">
+					<div class="recom-cars-box">
+						<div class="recom-car-pic">
+							<a href="#"><img src="images/recom_show_pic1.jpg" alt=""></a>
+						</div>
+						<ul class="car-info-list">
+							<li>
+								<h3>朗逸</h3>
+							</li>
+							<li>
+								<span>官方指导价：<b class="car-price-bold">9.28-16.58</b>万元</span>
+								<a href="#" class="enquiry-btn">询底价</a>
+							</li>
+							<li>
+								<span class="ma-r1">级  别：紧凑型车</span>
+								<span class="ma-r1">车身结构：两厢 三厢</span>
+								<span>变速箱：双离合</span>
+							</li>
+							<li class="mat0">
+								<span class="ma-r1 mat2">发动机：1.4T</span>
+								<div class="carcolors">
+									<span class="car-color-title">车身颜色：</span>
+									<div class="car-color">
+										<a href="#" class="current" style="background-color:red;"></a>
+										<a href="#" style="background-color:yellow;"></a>
+										<a href="#" style="background-color:green;"></a>
+										<a href="#" style="background-color:white;"></a>
+										<a href="#" style="background-color:yellow;"></a>
+										<a href="#" style="background-color:green;"></a>
+										<a href="#" style="background-color:white;"></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row ma-t15">
+					<div class="title-box title-box2">
+						<h2><a href="#">朗逸经销商</a></h2>
+						<span class="more more-list"><a href="">北京</a><a href="">上海</a><a href="#">广东</a><a href="#">山西</a><a href="#">辽宁</a><a href="#">吉林</a><a href="#">黑龙江</a><a href="#">天津</a><a href="#">更多>></a></span>
+					</div>
+					<ul class="cars-seller-list">
+						<li>
+							<h4>上海宝景星诚汽车销售服务有限公司</h4>
+							<p>电话：<b>021-1234567</b></p>
+							<p>地址：<span>[杨浦区]</span>周家嘴路3388号...</p>
+							<p>促销：上海大众各车系11月超强优惠</p>
+						</li>
+						<li>
+							<h4>上海宝景星诚汽车销售服务有限公司</h4>
+							<p>电话：<b>021-1234567</b></p>
+							<p>地址：<span>[杨浦区]</span>周家嘴路3388号...</p>
+							<p>促销：上海大众各车系11月超强优惠</p>
+						</li>
+						<li>
+							<h4>上海宝景星诚汽车销售服务有限公司</h4>
+							<p>电话：<b>021-1234567</b></p>
+							<p>地址：<span>[杨浦区]</span>周家嘴路3388号...</p>
+							<p>促销：上海大众各车系11月超强优惠</p>
+						</li>
+						<li>
+							<h4>上海宝景星诚汽车销售服务有限公司</h4>
+							<p>电话：<b>021-1234567</b></p>
+							<p>地址：<span>[杨浦区]</span>周家嘴路3388号...</p>
+							<p>促销：上海大众各车系11月超强优惠</p>
+						</li>
+					</ul>
+				</div>
+				<div class="row ma-t15">
+					<div class="title-box title-box2">
+						<h2><a href="#">相关阅读</a></h2>
+					</div>
+					<div class="article-list article-tab-list">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="article-pic"><img src="http://www.315che.com/images/article_pic_demo.jpg"></div>
+									<h4>哈弗H1车型正式上市 售6.89万-8.29万元</h4>
+									<div class="time">2014-11-03 </div>
+									<p>近日，我们从哈弗官方获悉，哈弗H1车型正式上市。新车共推出了六款车型，售价区间为6.89万-8.29万元。目前，哈弗H1实车已到店并接受预定。 哈弗H1官方指导价 ...</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="article-pic"><img src="http://www.315che.com/images/article_pic_demo.jpg"></div>
+									<h4>哈弗H1车型正式上市 售6.89万-8.29万元</h4>
+									<div class="time">2014-11-03 </div>
+									<p>近日，我们从哈弗官方获悉，哈弗H1车型正式上市。新车共推出了六款车型，售价区间为6.89万-8.29万元。目前，哈弗H1实车已到店并接受预定。 哈弗H1官方指导价 ...</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="article-pic"><img src="http://www.315che.com/images/article_pic_demo.jpg"></div>
+									<h4>哈弗H1车型正式上市 售6.89万-8.29万元</h4>
+									<div class="time">2014-11-03 </div>
+									<p>近日，我们从哈弗官方获悉，哈弗H1车型正式上市。新车共推出了六款车型，售价区间为6.89万-8.29万元。目前，哈弗H1实车已到店并接受预定。 哈弗H1官方指导价 ...</p>
+								</a>
+							</li>
+							<li class="nth-child-last">
+								<a href="#">
+									<div class="article-pic"><img src="http://www.315che.com/images/article_pic_demo.jpg"></div>
+									<h4>哈弗H1车型正式上市 售6.89万-8.29万元</h4>
+									<div class="time">2014-11-03 </div>
+									<p>近日，我们从哈弗官方获悉，哈弗H1车型正式上市。新车共推出了六款车型，售价区间为6.89万-8.29万元。目前，哈弗H1实车已到店并接受预定。 哈弗H1官方指导价 ...</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="post-comment">
+						<div class="title-box">
+							<h5>最新评论</h5>
+							<span class="comment-num"><b>118</b>条评论</span>
+						</div>
+						<div class="textareabox">
+							<textarea name="" id="" cols="30" rows="10" class="form-textarea">文明上网，理性发言</textarea>
+							<div class="textareabox-submitbar">
+								<div class="fn-right"><a href="#" class="comment-btn">发表评论</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="user-comment">
+						<div class="title">最新评论</div>
+						<dl class="comment-list">
+							<dd>氟正常的情况下不能制冷是啥情况？</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+							<dd>这倒不是，作为汽车爱好者，了解汽车看视频只是一种手段罢了，喜欢不喜欢的车型的视频都会去看，但是仅限于这个人的不会去看而已，原因就不多说了，萝卜白菜各有所爱，如果你喜欢他，那么对你说声抱歉，我只是发表一下自己的看法罢了</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+							<dd>氟正常的情况下不能制冷是啥情况？</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+							<dd>这倒不是，作为汽车爱好者，了解汽车看视频只是一种手段罢了，喜欢不喜欢的车型的视频都会去看，但是仅限于这个人的不会去看而已，原因就不多说了，萝卜白菜各有所爱，如果你喜欢他，那么对你说声抱歉，我只是发表一下自己的看法罢了</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+							<dd>氟正常的情况下不能制冷是啥情况？</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+							<dd>这倒不是，作为汽车爱好者，了解汽车看视频只是一种手段罢了，喜欢不喜欢的车型的视频都会去看，但是仅限于这个人的不会去看而已，原因就不多说了，萝卜白菜各有所爱，如果你喜欢他，那么对你说声抱歉，我只是发表一下自己的看法罢了</dd>
+							<dt>
+								<span class="fn-left">
+									<a href="#" class="user">315车友</a>
+									<span class="date">发表于：12月9日 13:54:06</span>
+								</span>
+								<span class="fn-right">
+									<span class="tag up"><a href="#">顶<span>(167)</span></a></span>
+									<span class="tag reply"><a href="#">回复<span>(0)</span></a></span>
+								</span>
+							</dt>
+						</dl>
+					</div>
+					<a href="#" class="showall-comments-btn ma-t20">查看所有评论</a>
+				</div>
+				<div class="row ma-t20">
+					<div class="title-box">
+						<h2><a href="#">热门车系</a></h2>
+					</div>
+					<div class="car-hot-line">
+						<ul class="clearfix">
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+							<li><a href="#">奥迪A6L</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="side">
+				<div class="side-ad"><a href="#"><img src="http://www.315che.com/images/sidebar_ad_demo2.jpg" alt=""></a></div>
+				<div class="side-list ma-b20">
+					<div class="title-box">
+						<h2><a href="#">精彩推荐</a></h2>
+					</div>
+					<ul class="car-side-list">
+						<li class="nth-child-first">
+							<a href="#">
+								<img src="http://www.315che.com/images/complaint_demo.jpg">
+								<div class="title">IX值不值得购买？值得不值得</div>
+								<span class="time">2014-11-28</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://www.315che.com/images/complaint_demo.jpg">
+								<div class="title">IX值不值得购买？值得不值得</div>
+								<span class="time">2014-11-28</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://www.315che.com/images/complaint_demo.jpg">
+								<div class="title">IX值不值得购买？值得不值得</div>
+								<span class="time">2014-11-28</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="http://www.315che.com/images/complaint_demo.jpg">
+								<div class="title">IX值不值得购买？值得不值得</div>
+								<span class="time">2014-11-28</span>
+							</a>
+						</li>
+						<li class="nth-child-last">
+							<a href="#">
+								<img src="http://www.315che.com/images/complaint_demo.jpg">
+								<div class="title">IX值不值得购买？值得不值得</div>
+								<span class="time">2014-11-28</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="side-list ma-b20">
+					<div class="title-box">
+						<h2><a href="#">看过朗逸的人还看</a></h2>
+					</div>
+					<div class="side-pic-list">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pic"><img src="http://www.315che.com/images/side_pic_demo.jpg" alt=""></div>
+									<div class="car-name">速腾</div>
+									<div class="car-price">10.58-22.56万</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="side-ad  ma-b20"><a href="#"><img src="http://www.315che.com/images/sidebar_ad_demo2.jpg" alt=""></a></div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>
+				<a href="#">关于我们</a> |
+				<a href="#">联系我们</a> |
+				<a href="#">广告服务</a> |
+				<a href="#">友情链接</a> |
+				<a href="#">网站地图</a> |
+				<a href="#">招聘信息</a> |
+				<a href="#">法律声明</a> |
+				<a href="#">车友会</a> |
+				<a href="#">加盟我们</a>
+			</p>
+			<p class="copyright">Copyright © 2005-2020 中国汽车消费网 备案号:沪ICP 备 05053107 号</p>
+			<p>
+				<a href="#"><img src="http://www.315che.com/images/sh_gongshang.jpg" alt=""></a>
+				<a href="#"><img src="http://www.315che.com/images/zx110.jpg" alt=""></a>
+				<a href="#"><img src="http://www.315che.com/images/sh_110.jpg" alt=""></a>
+			</p>
+		</div>
+	</div>
+	<!--主内容结束-->
+	</div>
+<!--主内容结束-->
+	<script src="http://www.315che.com/js/jquery-1.11.2.min.js"></script>
+	<script src="http://www.315che.com/js/jquery.bxslider.min.js"></script>
+	<script src="http://www.315che.com/js/global.js"></script>
+	<script src="http://www.315che.com/js/jcalendar.min.js"></script>
+	<script src="http://www.315che.com/js/jquery.lazyload.min.js"></script>
+	<script src='http://www.315che.com/js/base64.js'></script>
+
+	<script type="text/javascript">
+		function join_favorite(siteUrl, siteName){
+			try{
+				//window.external.addFavorite();
+			}catch(e){
+				alert("加入收藏夹失败，请使用Ctrl+D快捷键进行添加操作!"+e);
+			}
+		}
+		$(function(){
+			$.ajax({
+	    		url : 'http://www.315che.com/che/getNowCookie',
+	    		dataType : 'jsonp',
+	    		jsonp:'jsonpcallback',
+	    		success : function(data){
+	    			$(".change-city span").html(data[0].byname);
+	    			var html = '<i class="city-pos-icon"></i>';
+	    			$(".cur-city-pos").html(html+data[0].byname);
+	    		}
+		  	});
+		});
+
+		$("#top-show-city a").click(function(){
+			var englingname = $(this).attr("value");
+			$.ajax({
+	    		url : 'http://www.315che.com/che/setCityCookie',
+	    		dataType : 'jsonp',
+	    		data:{englingname:englingname},
+	    		jsonp:'jsonpcallback',
+	    		success : function(data){
+	    			window.location.href="http://www.315che.com/"+englingname+"/";
+	    		}
+		  	});
+
+
+		});
+
+		$(".hotcitys a").click(function(){
+			var englingname = $(this).attr("value");
+			$.ajax({
+	    		url : 'http://www.315che.com/che/setCityCookie',
+	    		dataType : 'jsonp',
+	    		data:{englingname:englingname},
+	    		jsonp:'jsonpcallback',
+	    		success : function(data){
+	    			window.location.href="http://www.315che.com/"+englingname+"/";
+	    		}
+		  	});
+		});
+	</script>
+
+
+	<script>
+		$(function() {
+		  $("img.lazy").lazyload({
+		    placeholder: "http://www.315che.com//images/default_car_icon.png"
+		  });
+		});
+	</script>
+</body>
+</html>

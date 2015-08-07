@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_imageSelect" extends="myDefault">
+		
+		<action name="carImageSelect" class="com.poly.action.action_image.ImageSelectAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTypeSelect.ftl</result>
+		</action>
+		
+		<action name="selectCar" class="com.poly.action.action_image.ImageSelectAction" method="selectCar">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTypeSelect.ftl</result>
+		</action>
+		
+	</package>
+	
+	
+
+</struts>

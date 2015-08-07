@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="msg" extends="myDefault">
+
+	
+		<action name="sendDailyMsgToManager" class="com.poly.action.action_msg.MsgAction" method="sendDailyMsgToManager">
+		<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="sendWeeklyMsgToManager" class="com.poly.action.action_msg.MsgAction" method="sendWeeklyMsgToManager">
+		<interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_data" extends="myDefault">	
+		<action name="ser_showProjects" class="com.poly.action.action_data.ServiceShowMyProjectsAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_showProjects.ftl</result>
+		</action>
+		<action name="ser_addProject" class="com.poly.action.action_data.ServiceAddProjectAction">
+			<result name="success" type="chain">
+				ser_saveProject
+			</result>
+		</action>
+		<action name="promo_director_pro" class="com.poly.action.action_data.PromoDirectorAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/promo_director_pro.ftl</result>
+		</action>
+		
+		<action name="promo_director_prosearch" class="com.poly.action.action_data.PromoDirectorAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/promo_director_pro.ftl</result>
+		</action>
+		
+		<action name="promo_director_pro_*" class="com.poly.action.action_data.PromoDirectorAction" method="{1}">
+		</action>
+		
+		<action name="count_kct_cost_first" class="com.poly.action.action_data.CountKctCostAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kct_cost.ftl</result>
+		</action>
+		
+		<action name="count_kct_data" class="com.poly.action.action_data.CountKctDataAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kct_data.ftl</result>
+		</action>
+		
+		<action name="count_kct_data_sign" class="com.poly.action.action_data.CountKctSignAction" method="getSignTable" >
+		</action>
+		
+		<action name="count_kct_transtable" class="com.poly.action.action_data.CountKctTranstableAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kct_transtable.ftl</result>
+		</action>
+		
+		<action name="count_kct_notsale" class="com.poly.action.action_data.CountKctNotsaleAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kct_notsale.ftl</result>
+		</action>
+		
+		<action name="count_kct_basedate" class="com.poly.action.action_data.CountKctBasedateAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kct_basedate.ftl</result>
+		</action>
+		
+		<action name="ser_enterKctEditQiandao" class="com.poly.action.action_data.ServiceEnterKCTEditQiandaoAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_editActDetail.ftl</result>
+		</action>
+		<action name="ser_saveEditQiandao" class="com.poly.action.action_data.ServiceSaveEditKctQiandaoAction" method="back">
+			
+		</action>
+		<action name="ser_getActDetail" class="com.poly.action.action_data.ServiceGetActDetailAction" method="back">
+			
+		</action>
+		<action name="ser_getDeptPerson" class="com.poly.action.action_data.ServiceGetDeptPersonAction" method="back">
+			
+		</action>
+		<action name="ser_saveActDetail" class="com.poly.action.action_data.ServiceSaveEditActDetailAction" method="back">
+			
+		</action>
+		<action name="promo_per_pro" class="com.poly.action.action_data.PromoPerAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/promo_per_pro1.ftl</result>
+		</action>
+		
+		<action name="promo_per_pro_in" class="com.poly.action.action_data.PromoPerAction" method="proIN" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/promo_per_promo_function.ftl</result>
+		</action>
+		
+		<action name="promo_per_pro_function_sub" class="com.poly.action.action_data.PromoPerAction" method="subFunction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/promo_per_promo_function.ftl</result>
+		</action>
+		
+		<action name="promo_per_pro_*" class="com.poly.action.action_data.PromoPerAction" method="{1}" >
+		</action>
+		<action name="ser_saveProject" class="com.poly.action.action_data.ServiceSaveProjectAction" method="back">
+		</action>
+		<action name="ser_saveBlProject" class="com.poly.action.action_data.ServiceSaveProjectAction" method="backBl">
+		</action>
+		<action name="ser_getProjectInfo" class="com.poly.action.action_data.ServiceGetProjectInfoAction" method="back">
+		</action>
+		<action name="ser_getBlProjectInfo" class="com.poly.action.action_data.ServiceGetProjectInfoAction" method="backBl">
+		</action>
+		<action name="ser_deleteProject" class="com.poly.action.action_data.ServiceDeleteProjectAction" method="back">
+		</action>
+		<action name="ser_deleteBlProject" class="com.poly.action.action_data.ServiceDeleteProjectAction" method="backBl">
+		</action>
+		<action name="ser_editProject" class="com.poly.action.action_data.ServiceEditProjectAction" >
+			<result name="success" type="chain">
+				ser_saveProject
+			</result>
+		</action>
+		<action name="ser_editBlProject" class="com.poly.action.action_data.ServiceEditProjectAction" method="editBl">
+			<result name="success" type="chain">
+				ser_saveBlProject
+			</result>
+		</action>
+		<action name="ser_project_list" class="com.poly.action.action_data.ServiceShowProjectListAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_projectList.ftl</result>
+		</action>
+		<action name="ser_examineProject" class="com.poly.action.action_data.ServiceExamineProjectAction"  method="back">
+		</action>
+		<action name="ser_examineBlProject" class="com.poly.action.action_data.ServiceExamineProjectAction"  method="backBl">
+		</action>
+		
+		<action name="present_apply" class="com.poly.action.action_data.PresentApplyAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/present_applylist1.ftl</result>
+		</action>
+		
+		<action name="present_apply_*" class="com.poly.action.action_data.PresentApplyAction" method="{1}">
+		</action>
+		
+		<action name="getGiftData" class="com.poly.action.action_data.ServiceGetGiftDataAction" method="getGiftData">
+			
+		</action>
+		<action name="enterGiftExamine" class="com.poly.action.action_data.GiftExamineAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/gift_examine.ftl</result>
+		</action>
+		<action name="getProNums" class="com.poly.action.action_data.GiftExamineAction" method="getProNums">
+		</action>
+		<action name="getModels" class="com.poly.action.action_data.GiftExamineAction" method="getModelsByIway">
+		</action>
+		<action name="examineGift" class="com.poly.action.action_data.GiftExamineAction" method="examineGift">
+		</action>
+		<action name="giftExamineSearch" class="com.poly.action.action_data.GiftExamineAction" method="search">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/gift_examine.ftl</result>
+		</action>
+		<action name="showMyprojectsByState" class="com.poly.action.action_data.ServiceShowProjectsByUseridAndStateAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_showProjectsByState.ftl</result>
+		</action>
+		<action name="newProject" class="com.poly.action.action_data.ServiceNewProjectAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_newProject.ftl</result>
+		</action>
+		<action name="getCustomService" class="com.poly.action.action_data.ServiceGetCustomServiceByOrgAction" method="back">
+		</action>
+		<action name="ser_pending" class="com.poly.action.action_data.ServiceShowPendingAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_pending.ftl</result>
+		</action>
+		<action name="ser_showMyActivity" class="com.poly.action.action_data.ServiceShowMyActivityAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_showMyActivity.ftl</result>
+		</action>
+		<action name="ser_forExamine" class="com.poly.action.action_data.ServiceShowProjectForExamineAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_showProjectForExamine.ftl</result>
+		</action>
+		<action name="ser_saveBl" class="com.poly.action.action_data.ServiceSaveBlAction"  method="back">
+		</action>
+		<action name="ser_endProject" class="com.poly.action.action_data.ServiceEndProjectAction"  method="back">
+		</action>
+		<action name="ser_viewHdxq" class="com.poly.action.action_data.ServiceViewHdxqAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_viewHdxq.ftl</result>
+		</action>
+		<action name="ser_viewQiandaoList" class="com.poly.action.action_data.ServiceShowQiandaoListAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/ser_viewQiandaoList.ftl</result>
+		</action>
+		<action name="ser_getQiandaoInfo" class="com.poly.action.action_data.ServiceGetQiandaoInfoAction"  method="back">
+		</action>
+		<action name="ser_getSaveQiandaoInfo" class="com.poly.action.action_data.ServiceSaveQiandaoInfoAction"  method="back">
+		</action>
+		<action name="ser_downQiandao" class="com.poly.action.action_data.ServiceDownQiandaoAction" method="downQiandao">
+		</action>
+		
+		<action name="present_gift" class="com.poly.action.action_data.GiftAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/present_gift.ftl</result>
+		</action>
+		
+		<action name="present_gift_*" class="com.poly.action.action_data.GiftAction" method="{1}">
+		</action>
+				
+		<!-- 数据提取相关 -->
+		<action name="tiqu_new" class="com.poly.action.action_data.TqAddNewAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_addNew.ftl</result>
+		</action>
+		<action name="tiqu_new_*" class="com.poly.action.action_data.TqAddNewAction" method="{1}" >
+		</action>
+		
+		<action name="tiqu_dir_examine" class="com.poly.action.action_data.TqDirExamineAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_DirExamine.ftl</result>
+		</action>
+		<action name="tiqu_dir_examine_*" class="com.poly.action.action_data.TqDirExamineAction" method="{1}" >
+		</action>
+		
+		<action name="tiqu_examine_result" class="com.poly.action.action_data.TqExamineResultAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_examine_result.ftl</result>
+		</action>
+		<action name="tiqu_examine_result_*" class="com.poly.action.action_data.TqExamineResultAction" method="{1}" >
+		</action>
+		<action name="tiqu_high_examine" class="com.poly.action.action_data.TqHighExamineAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_highExamine.ftl</result>
+		</action>
+		<action name="tiqu_high_examine_*" class="com.poly.action.action_data.TqHighExamineAction" method="{1}" >
+		</action>
+		
+		<action name="tiqu_deal" class="com.poly.action.action_data.TqDealAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_deal.ftl</result>
+		</action>
+		<action name="tiqu_deal_*" class="com.poly.action.action_data.TqDealAction" method="{1}" >
+		</action>
+		
+		<action name="tiqu_proList" class="com.poly.action.action_data.TqProListAction" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_proList.ftl</result>
+		</action>
+		
+		<action name="tiqu_proList_high" class="com.poly.action.action_data.TqProListAction" method="executeHigh" >
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_proList.ftl</result>
+		</action>		
+		<action name="tiqu_proList_dir" class="com.poly.action.action_data.TqProListAction" method="executeDir">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/tq_proList.ftl</result>
+		</action>
+		<action name="viewQtProjects" class="com.poly.action.action_data.ViewQtProjectsAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/viewQtProjects.ftl</result>
+		</action>
+		<action name="newQtProject" class="com.poly.action.action_data.NewQtProjectAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/newQtProject.ftl</result>
+		</action>
+		<action name="addQtProject" class="com.poly.action.action_data.AddQtProjectAction">
+			<result name="success" type="chain">
+				ser_saveProject
+			</result>
+		</action>
+		<!-- <action name="ini_data" class="com.poly.action.action_data.ToolsAction" >
+		</action> -->
+
+		<!-- 品牌统计 -->
+		<action name="brand_count" class="com.poly.action.action_data.BrandCountAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/brandCount_manage.ftl</result>
+		</action>
+
+		<action name="count_baomingChannel" class="com.poly.action.action_data.CountBaomingChannelAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_baomingChannel.ftl</result>
+		</action>
+		
+		<action name="count_baomingArea" class="com.poly.action.action_data.CountBaomingAreaAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_baomingArea.ftl</result>
+		</action>
+		<action name="count_kf" class="com.poly.action.action_data.CountKFAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kf.ftl</result>
+		</action>
+		<action name="count_kf_search" class="com.poly.action.action_data.CountKFAction" method="search">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kf.ftl</result>
+		</action>
+		<action name="count_kf_single" class="com.poly.action.action_data.CountKFAction" method="single">
+			<result name="success" type="freemarker">/WEB-INF/ftl/data/count_kf_single.ftl</result>
+		</action>
+	</package>
+
+</struts>

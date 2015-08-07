@@ -1,0 +1,1 @@
+<#macro img_url pic><#if pic?substring(0, 3) == "315">${img_315c_url}${pic?substring(3)}?v=${ver}<#elseif pic?substring(0, 3) == "ct1">${ctadm_ct_url}upload${pic?substring(3)}?v=${ver}<#else>${pic?substring(3)}?v=${ver}</#if></#macro>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="popad" extends="myDefault">
+		<action name="insertPopad" class="com.poly.action.action_advertisement.PopadAction" method="insertPopad">
+		    <result name="success" type="chain">getAllpopad</result>
+		</action>
+		<action name="toinsertPopad" class="com.poly.action.action_advertisement.PopadAction" method="toinsertPopad">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/adclick/popad_add.ftl</result>
+		</action>
+	    <action name="getAllpopad" class="com.poly.action.action_advertisement.PopadAction" method="getAllpopad">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/adclick/popad.ftl</result>
+		</action>
+	    <action name="deletePopad" class="com.poly.action.action_advertisement.PopadAction" method="deletePopad">
+		    <result name="success" type="redirectAction">getAllpopad?page=${page}</result>
+		</action>
+		<action name="updatePopad" class="com.poly.action.action_advertisement.PopadAction" method="updatePopad">
+		    <result name="success" type="chain">getAllpopad</result>
+		</action>
+	    <action name="toUpdatePopad" class="com.poly.action.action_advertisement.PopadAction" method="toUpdatePopad">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/adclick/popad_update.ftl</result>
+		</action>
+	    <action name="addPopSchedule" class="com.poly.action.action_advertisement.PopadAction" method="addPopSchedule">
+		</action>
+	    <action name="deletePopSchedule" class="com.poly.action.action_advertisement.PopadAction" method="deletePopSchedule">
+		</action>
+	    <action name="deletePopScheduleById" class="com.poly.action.action_advertisement.PopadAction" method="deletePopScheduleById">
+		</action>
+	    <action name="addPopScheduleById" class="com.poly.action.action_advertisement.PopadAction" method="addPopScheduleById">
+		</action>
+	</package>
+	
+</struts>

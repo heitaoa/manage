@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_saleFavored" extends="myDefault">
+	
+		<action name="SaleFavored*" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="{1}">
+			<result name="success" type="freemarker">/WEB-INF/ftl/saleFavored{1}.ftl</result>
+		</action>
+		
+		<action name="saveSaleFavored" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="saveSaleFavored">
+			<result name="success" type="redirect" >SaleFavoredmanage</result>
+		</action>
+		
+		<action name="deleteSaleFavored" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="deleteSaleFavored">
+			
+		</action>
+		
+		<action name="updateGroupState2" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="updateGroupState2">
+			<result name="success" type="redirect" >SaleFavoredmanage</result>
+		</action>
+		
+		<action name="getCarBrand"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCarBrand">
+		</action>	
+		
+		<action name="getCarBrand2"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCarBrand2">
+		</action>
+		
+		<action name="getCars"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCars">
+		</action>
+		
+		<action name="getCarsx"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCarsx">
+		</action>
+		
+		<action name="getCarsx00"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCarsx00">
+		</action>
+		
+		<action name="getCars2"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCars2">
+		</action>
+		
+		<action name="getCars2x"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getCars2x">
+		</action>
+		
+		<action name="getDeaDealers"
+			class="com.poly.action.action_saleFavored.SaleFavoredAction" method="getDeaDealers">
+		</action>
+		<action name="updateSaleFavored" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="updateSaleFavored">
+			<result name="success" type="freemarker" >/WEB-INF/ftl/saleFavoredmanage.ftl</result>
+		</action>
+		<action name="updateGroupState" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="updateGroupState">
+		</action>
+		<action name="showpre" class="com.poly.action.action_saleFavored.SaleFavoredAction" method="showpre">
+			<result name="success" type="freemarker">/WEB-INF/ftl/groupPreview.ftl</result>
+		</action>
+	</package>
+
+</struts>

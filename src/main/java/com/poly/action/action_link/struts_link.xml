@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="link" extends="myDefault">
+		<action name="linksManage" method="linksManage"
+			class="com.poly.action.action_link.LinkAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/linkmanage.ftl</result>
+		</action>
+		
+		<action name="linksSave" method="linksSave"
+			class="com.poly.action.action_link.LinkAction">
+		</action>
+		
+		<action name="linksUpdate" method="linksUpdate"
+			class="com.poly.action.action_link.LinkAction">
+		</action>
+		
+		<action name="linksDelete" method="linksDelete"
+			class="com.poly.action.action_link.LinkAction">
+		</action>
+		
+		<action name="makeLinkJs" method="makeLinkJs"
+			class="com.poly.action.action_link.LinkAction">
+		</action>
+		
+	</package>
+</struts>

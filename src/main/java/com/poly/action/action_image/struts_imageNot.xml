@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_imageNot" extends="myDefault">
+	
+		<action name="carTypeImageNot" class="com.poly.action.action_image.ImageNotAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTypeImageNot.ftl</result>
+		</action>
+		
+		<action name="carImageManageNot" class="com.poly.action.action_image.ImageNotAction" method="carImageManage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carImageManageNot.ftl</result>
+		</action>
+		
+		<action name="deleteImageTitleNot" class="com.poly.action.action_image.ImageNotAction" method="deleteImageTitle">
+			<result name="success"  type="chain">/WEB-INF/ftl/changeCarImageNot.ftl</result>
+		</action>
+		
+		
+		<action name="changeCarImageNot" class="com.poly.action.action_image.ImageNotAction" method="changeCarImage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/changeCarImageNot.ftl</result>
+		</action>
+		
+		<action name="deleteImageContentNot" class="com.poly.action.action_image.ImageNotAction" method="deleteImageContent">
+			<result name="success"  type="chain">changeCarImageNot</result>
+		</action>
+		
+		<action name="deleteImageContentBatchNot" class="com.poly.action.action_image.ImageNotAction" method="deleteImageContentBatch">
+			<result name="success"  type="chain">changeCarImageNot</result>
+		</action>
+		
+		<action name="setComefromNot" class="com.poly.action.action_image.ImageNotAction" method="setComefrom">
+			<result name="success"  type="chain">changeCarImageNot</result>
+		</action>
+		
+		<action name="setComefromBatchNot" class="com.poly.action.action_image.ImageNotAction" method="setComefromBatch">
+			<result name="success"  type="chain">changeCarImageNot</result>
+		</action>
+		
+		<action name="changeSortNot" class="com.poly.action.action_image.ImageNotAction" method="changeSort">
+			<result name="success"  type="chain">changeCarImageNot</result>
+		</action>
+		
+		<action name="deleteTitleNot" class="com.poly.action.action_image.ImageNotAction" method="deleteTitle">
+			<result name="success" type="chain">carImageManageNot</result>
+		</action>
+		
+	</package>	
+
+</struts>

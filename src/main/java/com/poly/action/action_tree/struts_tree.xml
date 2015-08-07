@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="tree" extends="myDefault">
+	
+		<action name="treeManage" class="com.poly.action.action_tree.Tree">
+			<result name="success" type="freemarker">/WEB-INF/ftl/treeManage.ftl</result>
+		</action>
+
+		<action name="initTree" class="com.poly.action.action_tree.Tree" method="initTree">
+		</action>
+		
+		<action name="initCustomerTree" class="com.poly.action.action_tree.Tree" method="initCustomerTree">
+		</action>
+		<action name="initCustomerTree2" class="com.poly.action.action_tree.Tree" method="initCustomerTree2">
+		</action>
+		
+		<action name="addTreeNodes" class="com.poly.action.action_tree.Tree" method="addTreeNodes">
+		</action>
+		
+		<action name="deleteTreeNodes" class="com.poly.action.action_tree.Tree" method="deleteTreeNodes">
+		</action>
+		
+		<action name="editTreeName" class="com.poly.action.action_tree.Tree" method="editTreeName">
+		</action>
+		
+		<action name="setSite" class="com.poly.action.action_tree.Tree" method="setSite">
+		</action>
+		
+		<action name="searchsite" class="com.poly.action.action_tree.Tree" method="searchsite">
+		</action>
+		
+		<action name="initULevelTree" class="com.poly.action.action_tree.Tree" method="initULevelTree">
+		</action>
+		
+		
+		
+		
+
+
+	</package>
+
+</struts>

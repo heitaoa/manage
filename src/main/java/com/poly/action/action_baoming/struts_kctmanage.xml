@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<package name="struts_kctmanage" extends="myDefault">
+	    <!-- 看车团回访界面 -->
+		<action name="kctmanage" class="com.poly.action.action_baoming.KCTManage" method="kctmanage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/kct_manage.ftl</result>
+		</action>
+		
+		<!-- 推送数据给经销商 -->
+		<action name="publishDateTo4S" class="com.poly.action.action_baoming.Publish4SAction" method="publishDateTo4S">
+		</action>
+		
+				
+						
+		<action name="kctmanageDetail" class="com.poly.action.action_baoming.KCTManage" method="kctmanageDetail">
+		</action>
+		
+		<action name="getBaojiaBySerialId" class="com.poly.action.action_baoming.KCTManage" method="getBaojiaBySerialId">
+		</action>
+		
+		<action name="getAreaByCityId" class="com.poly.action.action_baoming.KCTManage" method="getAreaByCityId">
+		</action>
+		
+		<action name="tuisongCity" class="com.poly.action.action_baoming.KCTManage" method="tuisongCity">
+		</action>
+		
+		<action name="addyifang" class="com.poly.action.action_baoming.KCTManage" method="addyifang">
+		</action>
+		
+		<action name="deleteBaoming" class="com.poly.action.action_baoming.KCTManage" method="deleteBaoming">
+		</action>
+		
+		<action name="addBaoming" class="com.poly.action.action_baoming.KCTManage" method="insertBaoming">
+		</action>
+		
+		<action name="kctsatisfy" class="com.poly.action.action_baoming.KCTSatisfy" method="kctsatisfy">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/kct_satisfy.ftl</result>
+		</action>
+		
+		<action name="querySatisfyDetail" class="com.poly.action.action_baoming.KCTSatisfy" method="querySatisfyDetail">
+		</action>
+		
+		<action name="satisfyUpdate" class="com.poly.action.action_baoming.KCTSatisfy" method="satisfyUpdate">
+		</action>
+		
+		<action name="kctmyProject" class="com.poly.action.action_baoming.KCTMyproject" method="myProject">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/kct_myproject.ftl</result>
+			<result name="kfsuccess" type="freemarker">/WEB-INF/ftl/baomingmanage/kct_kfproject.ftl</result>
+		</action>
+		
+		<action name="saveApplyInf" class="com.poly.action.action_baoming.AcceptApplyAction" method="saveApplyInf">	
+		 <interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="kctmanageQuery" class="com.poly.action.action_baoming.KCTManageQuery" method="kctmanageQuery">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/kct_manageQuery.ftl</result>
+		</action>
+		<action name="export" class="com.poly.action.action_baoming.KCTManageQuery" method="export">
+		</action>
+	   <!-- 抽查报名数据界面 -->
+		<action name="sampleBaoming" class="com.poly.action.action_baoming.SampleManage" method="samplemanage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/sample_manage.ftl</result>
+		</action>
+		<action name="getSubstationInfo" class="com.poly.action.action_baoming.SampleManage" method="getSubstationInfo">		
+		</action>
+		<action name="samplemanageDetail" class="com.poly.action.action_baoming.SampleManage" method="samplemanageDetail">		
+		</action>
+		<action name="addSample" class="com.poly.action.action_baoming.SampleManage" method="addSample">
+		</action>
+		<!-- 查看抽查数据界面 -->
+		<action name="sampleQuery" class="com.poly.action.action_baoming.SampleQuery" method="sampleQuery">
+			<result name="success" type="freemarker">/WEB-INF/ftl/baomingmanage/sample_query.ftl</result>
+		</action>
+		<action name="sampleQueryDetail" class="com.poly.action.action_baoming.SampleQuery" method="sampleQueryDetail">		
+		</action>
+		
+		<action name="queryCarInfo2" method="queryCarInfo2"
+			class="com.poly.action.action_baoming.KCTManage">
+		</action>
+
+	</package>
+
+
+</struts>

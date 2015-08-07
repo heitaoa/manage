@@ -1,0 +1,13 @@
+
+
+#图库
+http://admin.315che.com/adminche/deleteAllTuku
+
+#报价
+http://admin.315che.com/adminche/deleteAllPrice
+
+删除指定html
+http://admin.315che.com/adminche/deleteHtml?delFile=/tuku/index.htm
+
+接口：清除nginx目录下所有的html
+http://admin.315che.com/adminche/cleanAllHtml

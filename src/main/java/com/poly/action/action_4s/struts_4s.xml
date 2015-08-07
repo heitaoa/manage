@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="4s" extends="myDefault">
+
+
+		<action name="DealerInfoManager" class="com.poly.action.action_4s.DealerInfoManager">
+			<result name="success" type="freemarker">/WEB-INF/ftl/4s_ftl/dealerInfo.ftl</result>
+		</action>
+		<action name="GetCityListByAreaId" class="com.poly.action.action_4s.DealerInfoManager" method="GetCityListByAreaId">
+		</action>
+		<action name="DeleteDealerInfoByEid" class="com.poly.action.action_4s.DealerInfoManager" method="DeleteDealerInfoByEid">
+		</action>
+		<action name="ReSetPWByEid" class="com.poly.action.action_4s.DealerInfoManager" method="ReSetPWByEid">
+		</action>
+		<action name="UpDateDealerinfoBy" class="com.poly.action.action_4s.DealerInfoManager" method="UpDateDealerinfoBy">
+			<result name="success" type="freemarker">/WEB-INF/ftl/4s_ftl/updatedealerinfo.ftl</result>
+		</action>
+		<action name="GetIwayListByBrandId" class="com.poly.action.action_4s.DealerInfoManager" method="GetIwayListByBrandId">
+		</action>
+		<action name="AddDealerInfo1" class="com.poly.action.action_4s.DealerInfoManager" method="AddDealerInfo1">
+		</action>
+		<action name="SiteDealerManager" class="com.poly.action.action_4s.SiteDealerManager">
+			<result name="success" type="freemarker">/WEB-INF/ftl/4s_ftl/siteDealerManager.ftl</result>
+		</action>
+	</package>
+
+
+</struts>

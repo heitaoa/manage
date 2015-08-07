@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="news" extends="myDefault">
+
+		<action name="viewNewsList" class="com.poly.action.action_news.NewsAdmAction"
+			method="viewNewsList">
+			<result name="success" type="freemarker">/WEB-INF/ftl/news/newsList.ftl
+			</result>
+			<result name="newsList_sub" type="freemarker">/WEB-INF/ftl/news/newsList_sub.ftl
+			</result>
+		</action>
+
+
+		<action name="viewNewsEdit" class="com.poly.action.action_news.NewsAdmAction"
+			method="viewNewsEdit">
+			<result name="success" type="freemarker">/WEB-INF/ftl/news/newsEdit.ftl
+			</result>
+		</action>
+
+		<action name="saveNews" class="com.poly.action.action_news.NewsAdmAction"
+			method="saveNews">
+			<result name="input" type="freemarker">/WEB-INF/ftl/news/newsEdit.ftl
+			</result>
+			<result name="success" type="freemarker">/WEB-INF/ftl/news/newsList.ftl
+			</result>
+			<result name="tonewslist" type="freemarker">/WEB-INF/ftl/news/toNewsList.ftl
+			</result>
+		</action>
+
+		<action name="publishNews" class="com.poly.action.action_news.NewsAdmAction"
+			method="publishNews">
+		</action>
+		
+		<action name="revertNews" class="com.poly.action.action_news.NewsAdmAction"
+			method="revertNews">
+		</action>
+		
+		<action name="refreshNews" class="com.poly.action.action_news.NewsAdmAction"
+			method="refreshNews">
+		</action>
+		
+		<action name="previewNews" class="com.poly.action.action_news.NewsAdmAction"
+			method="previewNews">
+			<result name="success" type="freemarker">/WEB-INF/ftl/news/newsPreview.ftl
+			</result>
+		</action>
+		
+		<action name="deleteNews"
+			class="com.poly.action.action_news.NewsAdmAction" method="deleteNews">
+		</action>
+		
+		<action name="deleteContent"
+			class="com.poly.action.action_news.NewsAdmAction" method="deleteContent">
+		</action>
+		
+			<!-- 车链 
+		<action name="newsCarLink"
+			class="com.deity.adminCT.actions.news_page.NewsCarLinkAction">
+			<result name="ajax_car_link" type="freemarker">/WEB-INF/ftl/ajax_car_link.ftl
+			</result>
+		</action>
+		-->
+		
+	</package>
+
+</struts>

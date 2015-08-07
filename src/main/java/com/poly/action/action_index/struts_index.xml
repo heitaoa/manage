@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="index" extends="myDefault">
+
+		<action name="login" class="com.poly.action.Login">
+			<result name="success" type="redirect">index?rdStr=${rdStr}</result>
+		</action>
+		
+		<action name="login315" class="com.poly.action.Login" method="login315">
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="loginx" class="com.poly.action.Login" method="setLogin">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="redirect">http://oa.chetuan.com/</result>
+		</action>
+		
+		
+		<action name="index" class="com.poly.action.action_index.Index">
+			<result name="success" type="freemarker">/WEB-INF/ftl/index.ftl</result>
+		</action>
+		
+	</package>
+
+</struts>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="admin" extends="myDefault">
+
+
+		<action name="usermanage" class="com.poly.action.action_admin.AdminAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/usermanage.ftl</result>
+		</action>
+		<action name="adduser" class="com.poly.action.action_admin.AdminAction" method="adduser">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/adduser.ftl</result>
+		</action>
+		<action name="getFinanceUser" class="com.poly.action.action_admin.AdminAction" method="getFinanceUser">
+		</action>
+		<action name="saveUser" class="com.poly.action.action_admin.AdminAction" method="saveUser">
+		</action>
+		<action name="checkUser" class="com.poly.action.action_admin.AdminAction" method="checkUser">
+		</action>
+		<action name="deleteUser" class="com.poly.action.action_admin.AdminAction" method="deleteUser">
+		</action>
+		<action name="updateUser" class="com.poly.action.action_admin.AdminAction" method="updateUser">
+		</action>
+		<action name="gotoupdateUser" class="com.poly.action.action_admin.AdminAction" method="gotoupdateUser">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/updateuser.ftl</result>
+		</action>
+		<action name="stationusermanage" class="com.poly.action.action_admin.AdminAction" method="stationusermanage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/stationusermanage.ftl</result>
+		</action>
+		<action name="addstationuser" class="com.poly.action.action_admin.AdminAction" method="addstationuser">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/stationuseradd.ftl</result>
+		</action>
+		<action name="gotoupdatestationUser" class="com.poly.action.action_admin.AdminAction" method="gotoupdatestationUser">
+			<result name="success" type="freemarker">/WEB-INF/ftl/userpage/stationuserupdate.ftl</result>
+		</action>
+		
+		<action name="initCusULevelTree" class="com.poly.action.action_admin.AdminAction" method="initCusULevelTree">
+		</action>
+	</package>
+
+
+</struts>

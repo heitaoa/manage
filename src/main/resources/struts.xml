@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="myDefault" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="checkLogin" class="com.poly.interceptor.CheckLogin" />
+			<interceptor-stack name="checkLoginStack">
+				<interceptor-ref name="checkLogin" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="checkLoginStack" />
+
+		<global-results>
+			<result name="login" type="freemarker">/WEB-INF/ftl/login.ftl</result>
+			<result name="index" type="freemarker">/WEB-INF/ftl/index.ftl</result>
+			<result name="404" type="redirect">/404.html</result>
+			<result name="ajax" type="freemarker">/WEB-INF/ftl/ajax.ftl</result>
+			<result name="error" type="freemarker">/WEB-INF/ftl/err.ftl</result>
+			<result name="relogin" type="redirectAction">loginx</result>
+		</global-results>
+
+
+
+		<action name="Logout" class="com.poly.action.Login" method="Logout">
+			<result name="success" type="freemarker">/WEB-INF/ftl/login.ftl</result>
+		</action>
+
+	</package>
+
+	<include file="com/poly/action/action_index/struts_index.xml" />
+	<include file="com/poly/action/car_info/car_info.xml" />
+	<include file="com/poly/action/action_tree/struts_tree.xml" />
+	<include file="com/poly/action/page_block/page_block.xml" />
+	<include file="com/poly/action/action_advertisement/struts_advertisement.xml" />
+	<include file="com/poly/action/action_advertisement/struts_popad.xml" />
+	<include file="com/poly/action/action_advertisement/struts_exposure.xml" />
+	<include file="com/poly/action/action_subject/struts_subject.xml" />
+	<include file="com/poly/action/action_image/struts_image.xml" />
+	<include file="com/poly/action/action_groupBuy/struts_groupBuy.xml" />
+	<include file="com/poly/action/action_saleFavored/struts_saleFavored.xml" />
+	<include file="com/poly/action/action_news/news.xml" />
+	<include file="com/poly/action/action_saleFavored/struts_saleFavored.xml" />
+	<include file="com/poly/action/action_admin/struts_admin.xml" />
+	<include file="com/poly/action/action_link/struts_link.xml" />
+	<include file="com/poly/action/action_4s/struts_4s.xml" />
+	<include file="com/poly/action/action_statistics/statistics.xml" />
+	<include file="com/poly/action/action_tousu/struts_tousu.xml" />
+	<include file="com/poly/action/action_data/struts-data.xml" />
+	<include file="com/poly/action/action_baoming/struts_kctmanage.xml" />
+	<include file="com/poly/action/action_grabData/struts_grabData.xml" />
+	<include file="com/poly/action/action_msg/struts_msg.xml" />
+	
+	<!-- test -->
+	<include file="com/poly/tool/tool.xml" />
+	<include file="com/poly/action/action_subsites/subsites.xml" />
+</struts>

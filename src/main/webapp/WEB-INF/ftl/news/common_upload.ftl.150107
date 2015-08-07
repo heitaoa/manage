@@ -1,0 +1,114 @@
+<#macro upload_pic upload_toggle_id callBackFun="">
+<link href="${admin_che_url}css/uploadPic.css?v=${cssVer}" rel="stylesheet">
+
+
+<div id="upload_pic_view_bg" class="upload_pic_view_bg"></div>
+<div id="upload_pic_float_container" class="upload_pic_float_container">
+	<h2><a href="javascript:void(0);" class="close">关闭</a></h2>
+	<h2><font id="pre_photo_err" color="red"></font></h2>
+      <form id="form_upload_pic" action="uploadPic" method="post" enctype="multipart/form-data">
+        <div class="theme-pic"><img id="img_file_1" src="/img/theme_demo_pic.jpg" alt="" width="127" height="127"></div>
+        <input id="file_1" name="photo" class="sel-file" type="file" onchange="ctUploadFile(this)"/>
+        <div id="file_append_can">
+        <!--...-->
+        </div>
+        
+        <input id="sb1" type="button" onclick="addFile()" value="不够，我还要传" />
+      </form>
+</div>
+
+<script src="${admin_che_url}js/jquery.form.js?v=${cssVer}" type="text/javascript"></script>
+<script src="${admin_che_url}js/ajaxfileupload.js?v=${jsVer}" type="text/javascript" ></script>
+<script>
+var idCount=2;
+
+
+function addFile(){
+	var fid = "file_"+idCount;
+	var imgid = "img_file_"+idCount;
+	$("#file_append_can").append('<div class="theme-pic"><img id='+imgid+' src="/img/theme_demo_pic.jpg" alt="" width="127" height="127"></div>');
+	$("#file_append_can").append('<input id='+fid+' name="photo" class="sel-file" type="file" onchange="ctUploadFile(this)"/>');
+	idCount++;
+}
+
+function ctUploadFile(file){
+	var fid = file.id;
+	var imgid = "img_"+fid;
+	$.ajaxFileUpload({
+			url:"uploadPic",
+			secureuri:false,
+			fileElementId:fid,
+			dataType: "json",
+			success:function(data,status){
+				$("#"+imgid).attr('src', data.icon); 
+				<#if callBackFun?length gt 0>
+				${callBackFun}(data);
+				</#if>
+			},
+			error:function(data,status){
+				//alert(status+":"+data.err);
+			}
+		})
+}
+
+$(function(){
+	
+	function ajaxFileUpload(){
+		$.ajaxFileUpload({
+			url:"uploadPic",
+			secureuri:false,
+			fileElementId:"inp_file_1",
+			success:function(data,status){
+				alert(data +"|"+status+"|");
+			},
+			error:function(){
+				alert("上传失败，请重试！");
+			}
+		})
+	}
+
+	//上传图片
+	$("#inp_file_1").on("",function(){
+		//ajaxFileUpload();
+		$("#form_upload_pic").ajaxSubmit({ 
+			success: succUploadPic,
+			error: errUpload
+			});
+	});
+	
+	function succUploadPic(data, status) {
+		var obj = jQuery.parseJSON(data);
+		alert(obj.icon);
+		$("#img_view_1").attr('src', obj.icon); 
+		//$("#news_titlephoto").val(html);
+		<#if callBackFun?length gt 0>
+		${callBackFun}(obj);
+		</#if>
+	}
+	
+	function errUpload(html) {
+		alert("err"+html);
+	}
+	
+	
+
+	$("#upload_pic_view_bg").hide();
+	$("#upload_pic_float_container").hide();
+
+	$("#${upload_toggle_id}").click(function(){
+		$("#upload_pic_view_bg").css({display:"block",height:$(document).height()});
+		var yscroll = document.documentElement.scrollTop;
+		$("#upload_pic_float_container").css("top","150px");
+		$("#upload_pic_float_container").css("display","block");
+		document.documentElement.scrollTop = 0;
+	});
+	
+	$(".close").click(function(){
+		$("#upload_pic_view_bg").css("display","none");
+		$("#upload_pic_float_container").css("display","none");
+	});
+	
+	
+})
+</script>
+</#macro>

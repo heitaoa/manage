@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="subject" extends="myDefault">
+		<action name="subject" class="com.poly.action.action_subject.SubjectAction" method="subject">
+			<result name="subject" type="freemarker">/WEB-INF/ftl/subject/subject.ftl</result>
+		</action>
+		<action name="publishSubject" class="com.poly.action.action_subject.SubjectAction" method="publishSubject">
+			<result name="publishSubject" type="redirectAction">subject?page=${page!}</result>
+		</action>
+		<action name="setSubjectToMould" class="com.poly.action.action_subject.SubjectAction" method="setSubjectToMould">
+			<result name="setSubjectToMould" type="redirectAction">subject?page=${page!}</result>
+		</action>
+		<action name="setSubjectNotToMould" class="com.poly.action.action_subject.SubjectAction" method="setSubjectNotToMould">
+			<result name="setSubjectNotToMould" type="redirectAction">subject?page=${page!}</result>
+		</action>
+		<action name="toUpdateSubject" class="com.poly.action.action_subject.SubjectAction" method="toUpdateSubject">
+			<result name="toUpdateSubject" type="freemarker">/WEB-INF/ftl/subject/subject_update.ftl</result>
+		</action>
+		<action name="updateSubject" class="com.poly.action.action_subject.SubjectAction" method="updateSubject">
+			<result name="updateSubject" type="chain">subject</result>
+		</action>
+		<action name="deleteSubject" class="com.poly.action.action_subject.SubjectAction" method="deleteSubject">
+			<result name="deleteSubject" type="chain">subject</result>
+		</action>
+		<action name="toAddSubject" class="com.poly.action.action_subject.SubjectAction" method="toAddSubject">
+			<result name="toAddSubject" type="freemarker">/WEB-INF/ftl/subject/subject_add.ftl</result>
+		</action>
+		<action name="addSubject" class="com.poly.action.action_subject.SubjectAction" method="addSubject">
+			<result name="addSubject" type="chain">subject</result>
+		</action>
+		<action name="getSubjectContent" class="com.poly.action.action_subject.SubjectAction" method="getSubjectContent">
+			<result name="getSubjectContent" type="freemarker">/WEB-INF/ftl/subject/subject_mould.ftl</result>
+		</action>
+		<action name="toAddSubjectContent" class="com.poly.action.action_subject.SubjectContentAction" method="toAddSubjectContent">
+			<result name="toAddSubjectContent" type="freemarker">/WEB-INF/ftl/subject/subject_content_add.ftl</result>
+		</action>
+		<action name="toUpdateSubjectContent" class="com.poly.action.action_subject.SubjectContentAction" method="toUpdateSubjectContent">
+			<result name="toUpdateSubjectContent" type="freemarker">/WEB-INF/ftl/subject/subject_content_update.ftl</result>
+		</action>
+		<action name="addSubjectContent" class="com.poly.action.action_subject.SubjectContentAction" method="addSubjectContent">
+			<result name="addSubjectContent" type="redirectAction">getSubjectContent?subjectId=${subjectId}</result>
+		</action>
+		<action name="updateSubjectContent" class="com.poly.action.action_subject.SubjectContentAction" method="updateSubjectContent">
+			<result name="updateSubjectContent" type="redirectAction">getSubjectContent?subjectId=${subjectId}</result>
+		</action>
+		<action name="deleteSubjectContent" class="com.poly.action.action_subject.SubjectContentAction" method="deleteSubjectContent">
+			<result name="deleteSubjectContent" type="redirectAction">getSubjectContent?subjectId=${subjectId}</result>
+		</action>
+		
+		<action name="deleteSubjectData" class="com.poly.action.action_subject.SubjectDataAction" method="deleteSubjectData">
+			<result name="deleteSubjectData" type="redirectAction">subjectData?contentid=${contentid}</result>
+		</action>
+		<action name="toAddSubjectData" class="com.poly.action.action_subject.SubjectDataAction" method="toAddSubjectData">
+			<result name="toAddSubjectData" type="freemarker">/WEB-INF/ftl/subject/subjectdata_add.ftl</result>
+		</action>
+		<action name="addSubjectData" class="com.poly.action.action_subject.SubjectDataAction" method="addSubjectData">
+			<result name="addSubjectData" type="redirectAction">subjectData?contentid=${contentid}</result>
+		</action>
+		<action name="toUpdateSubjectData" class="com.poly.action.action_subject.SubjectDataAction" method="toUpdateSubjectData">
+			<result name="toUpdateSubjectData" type="freemarker">/WEB-INF/ftl/subject/subjectdata_update.ftl</result>
+		</action>
+		<action name="updateSubjectData" class="com.poly.action.action_subject.SubjectDataAction" method="updateSubjectData">
+			<result name="updateSubjectData" type="redirectAction">subjectData?contentid=${contentid}</result>
+		</action>
+		<action name="subjectData" class="com.poly.action.action_subject.SubjectDataAction" method="subjectData">
+			<result name="subjectData" type="freemarker">/WEB-INF/ftl/subject/subjectdata.ftl</result>
+		</action>
+		<action name="genJsBlockById" class="com.poly.action.action_subject.SubjectDataAction" method="genJsBlockById">
+		</action>
+		<action name="getMouldByType" class="com.poly.action.action_subject.SubjectAction" method="getMouldByType">
+		</action>
+		<action name="genCarJson" class="com.poly.action.action_subject.GenCarInfoAction" method="genCarJson">
+		</action>
+		<action name="genBrandJson" class="com.poly.action.action_subject.GenCarInfoAction" method="genBrandJson">
+		</action>
+		
+		
+	</package>
+
+</struts>

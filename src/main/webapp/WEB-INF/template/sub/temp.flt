@@ -1,0 +1,25 @@
+<li class="item">
+	<div class="pic-wrapper">
+		<a href="">
+			<span class="pic-inner">
+				<div class="pic"><img src="images/on_sale_pic.jpg" alt=""></div>
+				<div class="glass">
+					<span class="logo"><img src="images/sm_logo_icon_xfl.png" alt=""></span>
+					<span class="title">【Chevrolet雪佛兰】</span>
+				</div>
+			</span>
+		</a>
+	</div>
+	<div class="info">
+		<h3><strong>【雪佛兰特价团购】</strong>创库、爱唯欧超低价团购会邀您参加！参团有礼！</h3>
+		<ul>
+			<li><span>时间：</span>时间待定，接受报名</li>
+			<li><span>地点：</span>上海雪佛兰授权4S店</li>
+			<li><span>车型：</span>雪佛兰1、雪佛兰2、雪佛兰3</li>
+			<li><span>时间：</span>现金优惠1.5万元，购车送车牌！</li>
+		</ul>
+		<div class="sign">
+			<b>144</b>人已报名<a class="go" href="">去抢购</a>
+		</div>
+	</div>
+</li>

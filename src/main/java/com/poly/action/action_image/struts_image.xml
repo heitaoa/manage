@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_image" extends="myDefault">
+	
+		<action name="carTypeImage" class="com.poly.action.action_image.ImageAction">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carTypeImage.ftl</result>
+		</action>
+		
+		<action name="refreshPage" class="com.poly.action.action_image.ImageAction" method="refreshPage">
+		</action>
+		
+		<action name="carImageManage" class="com.poly.action.action_image.ImageAction" method="carImageManage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/carImageManage.ftl</result>
+		</action>
+		
+		<action name="deleteImageTitle" class="com.poly.action.action_image.ImageAction" method="deleteImageTitle">
+			<result name="success"  type="chain">/WEB-INF/ftl/changeCarImage.ftl</result>
+		</action>
+		
+		
+		<action name="changeCarImage" class="com.poly.action.action_image.ImageAction" method="changeCarImage">
+			<result name="success" type="freemarker">/WEB-INF/ftl/changeCarImage.ftl</result>
+		</action>
+		
+		<action name="deleteImageContent" class="com.poly.action.action_image.ImageAction" method="deleteImageContent">
+			<result name="success"  type="chain">changeCarImage</result>
+		</action>
+		
+		<action name="deleteImageContentBatch" class="com.poly.action.action_image.ImageAction" method="deleteImageContentBatch">
+			<result name="success"  type="chain">changeCarImage</result>
+		</action>
+		
+		<action name="setComefrom" class="com.poly.action.action_image.ImageAction" method="setComefrom">
+			<result name="success"  type="chain">changeCarImage</result>
+		</action>
+		
+		<action name="setComefromBatch" class="com.poly.action.action_image.ImageAction" method="setComefromBatch">
+			<result name="success"  type="chain">changeCarImage</result>
+		</action>
+		
+		<action name="changeSort" class="com.poly.action.action_image.ImageAction" method="changeSort">
+			<result name="success"  type="chain">changeCarImage</result>
+		</action>
+		
+				
+		<action name="deleteTitle" class="com.poly.action.action_image.ImageAction" method="deleteTitle">
+			<result name="success" type="chain">carImageManage</result>
+		</action>
+		
+		<action name="sortBatchInit" class="com.poly.action.action_image.ImageAction" method="sortBatchInit">
+		</action>
+		
+		<action name="sortBatch" class="com.poly.action.action_image.ImageAction" method="sortBatch">
+		</action>
+		
+		<action name="imagechouqu" class="com.poly.action.action_image.ImageAction" method="imagechouqu">
+		</action>
+		
+		<action name="updateContentTitle" class="com.poly.action.action_image.ImageAction" method="updateContentTitle">
+		</action>
+		
+		<action name="imageUpload" class="com.poly.action.action_image.FileUploadAction">
+			<interceptor-ref name="fileUpload">
+                <param name="allowedTypes">
+                    image/bmp,image/png,image/gif,image/jpeg,image/jpg,application/x-shockwave-flash
+                </param>
+                <param name="maximumSize">125829120</param>
+            </interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+	</package>
+	
+	<include file="com/poly/action/action_image/struts_imageEdit.xml" />
+	<include file="com/poly/action/action_image/struts_imageSelect.xml" />
+	<include file="com/poly/action/action_image/struts_imageNot.xml" />
+	<include file="com/poly/action/action_image/struts_imageEditNot.xml" />
+	<include file="com/poly/action/action_image/struts_imageGet.xml" />
+
+</struts>

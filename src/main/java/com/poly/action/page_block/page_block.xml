@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="news_block" extends="myDefault">
+
+		<!--  页面模块编辑，入口页toPageBlock。 -->
+		<!--  分页ajax listData -->
+		<!-- 刷新模版 refreshPage 根据模块id,找到模版ftl，并根据模版生成文件 -->
+		<action name="page_*" method="{1}"
+			class="com.poly.action.page_block.ChePageBlockAction">
+			<result type="freemarker">/WEB-INF/ftl/page/pageBlock.ftl</result>
+		</action>
+
+		<action name="modify_*" method="{1}" class="com.poly.action.page_block.ChePageModifyAction">
+			<result type="freemarker">/WEB-INF/ftl/page/pageModify.ftl</result>
+			<result name="error" type="redirectAction">page_toPageBlock</result>
+		</action>
+
+	</package>
+</struts>

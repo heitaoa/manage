@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="subsites" namespace="/subsites" extends="myDefault">
+
+		<!-- 分站列表页 -->
+		<action name="list" method="list" class="com.poly.action.action_subsites.SubSitesAction">
+			<result type="freemarker">/WEB-INF/ftl/subsites/subsitesList.ftl</result>
+		</action>
+
+		<!-- 跳转到新增修改页 -->
+		<action name="toSave" method="toSave" class="com.poly.action.action_subsites.SubSitesAction">
+			<result type="freemarker">/WEB-INF/ftl/subsites/subsitesSave.ftl</result> 
+		</action>
+		
+		<!-- 分站新增或修改 -->
+		<action name="save" method="save" class="com.poly.action.action_subsites.SubSitesAction">
+			<result type="redirectAction">list</result>
+			<result name="error" type="freemarker">/WEB-INF/ftl/subsites/subsitesSave.ftl</result>
+		</action>
+		
+	</package>
+</struts>
+

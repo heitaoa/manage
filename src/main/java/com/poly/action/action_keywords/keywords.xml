@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="keywords" extends="myDefault">
+		<action name="keyword_*" method="{1}"
+			class="com.deity.adminCT.actions.action_keywords.KeywordsAction">
+			<result name="toPage" type="freemarker">/WEB-INF/ftl/keywords.ftl</result>
+		</action>
+
+		<action name="um_*" class="com.deity.adminCT.actions.action_keywords.URLMappingAction" method="{1}">
+			<result name="toPage" type="freemarker">/WEB-INF/ftl/urlmapping.ftl</result>
+			<result type="redirectAction">um_toPage</result>
+		</action>
+	</package>
+</struts>

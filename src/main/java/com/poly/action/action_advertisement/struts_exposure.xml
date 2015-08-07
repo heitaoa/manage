@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="exposure" extends="myDefault">
+		<action name="getAllExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="getAllExposure">
+			<result name="success" type="freemarker">/WEB-INF/ftl/adclick/exposure.ftl</result>
+		</action>
+		<action name="toInsertExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="toInsertExposure">
+			<result name="success" type="freemarker">/WEB-INF/ftl/adclick/exposure_add.ftl</result>
+		</action>
+		<action name="insertExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="insertExposure">
+			<result name="success" type="chain">getAllExposure</result>
+		</action>
+		<action name="updateExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="updateExposure">
+		    <result name="success" type="chain">getAllExposure</result>
+		</action>
+		<action name="toUpdateExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="toUpdateExposure">
+		    <result name="success" type="freemarker">/WEB-INF/ftl/adclick/exposure_update.ftl</result>
+		</action>
+		<action name="deleteExposure" class="com.poly.action.action_advertisement.AdExposureAction" method="deleteExposure">
+		    <result name="success" type="chain">getAllExposure</result>
+		</action>
+	</package>
+	
+</struts>

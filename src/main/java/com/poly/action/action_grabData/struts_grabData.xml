@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="struts_grabData" extends="myDefault">	
+		<action name="grab*" class="com.poly.action.action_grabData.GrabDataAction" method="grab{1}">
+		    <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="grabYicheData" class="com.poly.action.action_grabData.GrabYiCheDataAction" method="grabYicheData">
+		    <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="syncApplyInfoAction" class="com.poly.action.action_grabData.SyncApplyInfoAction" method="syncData">
+		    <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="syncCarDataAction" class="com.poly.action.action_grabData.SyncCarDataAction" method="syncData">
+		    <interceptor-ref name="defaultStack" />
+		</action>
+		<action name="filterDataAction" class="com.poly.action.action_grabData.FilterDataAction" method="filterData">
+		    <interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+
+</struts>

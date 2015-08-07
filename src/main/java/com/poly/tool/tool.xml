@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="tool" extends="myDefault">
+	
+		<action name="test500" class="com.poly.tool.DeleteHtmAction" method="test500">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+		<action name="deleteHtml" class="com.poly.tool.DeleteHtmAction">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+		
+		<action name="deleteMobileHtml" class="com.poly.tool.DeleteHtmAction" method="deleteMobileHtml">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+		<action name="deleteImg" class="com.poly.tool.DeleteImgAction">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+		<action name="cleanAllHtml" class="com.poly.tool.CleanAllHtmlAction">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+		<action name="deleteAllPrice" class="com.poly.tool.DeletePriceAction">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+		<action name="deleteAllTuku" class="com.poly.tool.DeleteTukuAction">
+			<interceptor-ref name="defaultStack" />
+			<result name="success" type="freemarker">/WEB-INF/ftl/tool/deleteHtml.ftl
+			</result>
+		</action>
+
+
+		<action name="cleanRedisIndex" class="com.poly.tool.CleanRedisAction"
+			method="cleanRedisIndex">
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+		<!-- 刷新cdn接口 -->
+		<action name="refCdn" class="com.poly.tool.CdnAction">
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+	</package>
+
+</struts>

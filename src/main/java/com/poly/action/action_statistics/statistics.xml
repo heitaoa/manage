@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="statistics" extends="myDefault">
+
+
+		<action name="stat_*" class="com.poly.action.action_statistics.StatisticsAction" method="{1}">
+			<result name="success" type="freemarker">/WEB-INF/ftl/statistics/stat_view.ftl</result>
+			<result name="stat_news_list_sub" type="freemarker">/WEB-INF/ftl/statistics/stat_news_list_sub.ftl</result>
+		</action>
+		
+		
+		<action name="cnzz_*" class="com.poly.action.action_statistics.CnzzAction" method="{1}">
+			<result name="success" type="freemarker">/WEB-INF/ftl/statistics/cnzz_view.ftl</result>
+			<result name="stat_news_list_sub" type="freemarker">/WEB-INF/ftl/statistics/cnzz_news_list_sub.ftl</result>
+			<result name="cnzz_count_list_sub" type="freemarker">/WEB-INF/ftl/statistics/cnzz_count_list_sub.ftl</result>
+		</action>
+		<action name="sendNews" class="com.poly.action.action_statistics.SendNewsAction" method="sendNews"></action>
+		<action name="upload" class="com.poly.action.action_statistics.SendNewsAction" method="upload"></action>
+		<action name="toSendNews" class="com.poly.action.action_statistics.SendNewsAction" method="toSendNews">
+			<result name="success" type="freemarker">/WEB-INF/ftl/statistics/send_news_che.ftl</result>
+		</action>
+	</package>
+
+
+</struts>

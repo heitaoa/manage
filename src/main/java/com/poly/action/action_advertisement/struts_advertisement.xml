@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+ "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!-- Include webwork defaults (from WebWork JAR). -->
+	<!-- <include file="struts-default.xml" /> -->
+
+	<package name="advertisement" extends="myDefault">
+		<action name="advertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="toAdvertisement">
+			<result name="toAdvertisement" type="freemarker">/WEB-INF/ftl/advertisement.ftl</result>
+		</action>
+		<action name="toAddAdInfo" class="com.poly.action.action_advertisement.AdvertisementAction" method="toAddAdInfo">
+			<result name="toAddAdInfo" type="freemarker">/WEB-INF/ftl/adinfo_add.ftl</result>
+		</action>
+		<action name="toAddAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="toAddAdvertisement">
+			<result name="toAddAdvertisement" type="freemarker">/WEB-INF/ftl/advertisement_add.ftl</result>
+		</action>
+		<action name="addAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="addAdvertisement">
+			<result name="addAdvertisement" type="redirectAction">/advertisement?city=${city}</result>
+		</action>
+		<action name="getAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="getAdvertisement">
+			<result name="getAdvertisement" type="freemarker">/WEB-INF/ftl/adinfo_show.ftl</result>
+		</action>
+		<action name="toUpdateAdInfo" class="com.poly.action.action_advertisement.AdvertisementAction" method="toUpdateAdInfo">
+			<result name="toUpdateAdInfo" type="freemarker">/WEB-INF/ftl/adinfo_update.ftl</result>
+		</action>
+		<action name="addAdInfo" class="com.poly.action.action_advertisement.AdvertisementAction" method="addAdInfo">
+			<result name="addAdInfo" type="redirectAction">/getAdvertisement?adId=${adId}</result>
+		</action>
+		<action name="getAdInfoByCity" class="com.poly.action.action_advertisement.AdvertisementAction" method="getAdInfoByCity">
+		</action>
+		<action name="getAdSchedule" class="com.poly.action.action_advertisement.AdvertisementAction" method="getAdSchedule">
+		</action>
+		<action name="addAdSchedule" class="com.poly.action.action_advertisement.AdvertisementAction" method="addAdSchedule">
+		</action>
+		<action name="deleteAdSchedule" class="com.poly.action.action_advertisement.AdvertisementAction" method="deleteAdSchedule">
+		</action>
+		<action name="judgeAdHasOrNot" class="com.poly.action.action_advertisement.AdvertisementAction" method="judgeAdHasOrNot">
+		</action>
+		<action name="deleteAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="deleteAdvertisement">
+			<result name="deleteAdvertisement" type="redirectAction">getAdvertisement?adId=${adId}</result>
+		</action>
+		<action name="toUpdateAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="toUpdateAdvertisement">
+			<result name="toUpdateAdvertisement" type="freemarker">/WEB-INF/ftl/advertisement_update.ftl</result>
+		</action>
+		<action name="updateAdvertisement" class="com.poly.action.action_advertisement.AdvertisementAction" method="updateAdvertisement">
+			<result name="updateAdvertisement" type="redirectAction">advertisement?city=${city}</result>
+		</action>
+	</package>
+
+
+</struts>
